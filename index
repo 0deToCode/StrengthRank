@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <h1 id="title">Title</h1>
+  </head>
+  <body>
+    <p id="description" type="text">description</p>
+<form id="survey-form">
+  <p>description</p>
+    <input id="name" required minlength="1" maxlength="16" placeholder="Yor Beautiful"></input>
+    <label id="name-label">Name Input</label>
+    <input id="email" type="email" min="1" max="32" required placeholder="example@examplemail.com"></input>
+    <label id="email-label">Email Input</label>
+    <input id="number" type="number" required placeholder="1-16" min="1" max="16"></input>
+    <label id="number-label" type="number">Number input</label>
+   <input id="RIR" type="number" placeholder="0 to 10 RIR" min="0" max="10"></input>
+  <label id="RIR">RIR</label>
+  <select id="dropdown">
+    <option disabled value="None">Select your exercise</option>
+      <option value="Bench press">Bench press</option>
+    <option value="Pull ups">Pull ups
+    </option>
+  </select>
+  <input type="radio" value="female" name="gender">Female</input>
+  <input type="radio" value="male" name="gender">Male</input>
+  <input type="checkbox" value="PR'd">PR'd</input>
+  <input type="checkbox" value="failed attempt">Failed Attempt</input>
+  <textarea placeholder="Notes"></textarea>
+  <button id="submit"></button>
+  </form>
+</body>
+</html>
