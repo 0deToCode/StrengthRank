@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Survey Form - v2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, p {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Workout Survey Form</h1>
+    <p id="description">Please fill out this form about your recent lifting session.</p>
+
+    <form id="survey-form">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required minlength="1" maxlength="16" placeholder="Your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="example@examplemail.com">
+
+        <label for="number">Age (1-16):</label>
+        <input type="number" id="number" required min="1" max="16" placeholder="Enter your age">
+
+        <label for="RIR">RIR (Reps in Reserve 0-10):</label>
+        <input type="number" id="RIR" min="0" max="10" placeholder="0 to 10">
+
+        <label for="dropdown">Exercise:</label>
+        <select id="dropdown" required>
+            <option value="" disabled selected>Select your exercise</option>
+            <option value="Bench press">Bench Press</option>
+            <option value="Pull ups">Pull Ups</option>
+        </select>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+        </div>
+
+        <label>Session Result:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="prd" value="PR'd">
+            <label for="prd">PR'd (Personal Record)</label>
+            
+            <input type="checkbox" id="failed" value="failed attempt">
+            <label for="failed">Failed Attempt</label>
+        </div>
+
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" rows="5" placeholder="How did the set feel? Any comments..."></textarea>
+
+        <button type="submit" id="submit">Enter</button>
+
+    </form>
+
+</body>
+</html>
